@@ -12,6 +12,28 @@ import re
 import tqdm
 import string
 
+def _download_and_extract(url, path, filename):
+    import zipfile, tarfile
+    import requests
+
+    fn = os.path.join(path, filename)
+
+    while True:
+        try:
+            tar = tarfile.open(fn, 'r:gz')
+            tar.extractall()
+            tar.close()
+            break
+        except Exception:
+            os.makedirs(path, exist_ok=True)
+            f_remote = requests.get(url, stream=True)
+            sz = f_remote.headers.get('content-length')
+            assert f_remote.status_code == 200, 'fail to open {}'.format(url)
+            with open(fn, 'wb') as writer:
+                for chunk in tqdm(f_remote.iter_content(chunk_size=1024*1024)):
+                    writer.write(chunk)
+            print('Download finished. Unzipping the file...')
+
 class MovieLens(object):
     def __init__(self, directory, neg_size=99):
         '''
@@ -21,6 +43,11 @@ class MovieLens(object):
                    movies.dat
                    ratings.dat
         '''
+        url = 'https://s3.us-east-2.amazonaws.com/dgl.ai/dataset/movielens.tar.gz'
+        if not os.path.exists(os.path.join(directory, 'users.dat')):
+            print('File not found. Downloading from', url)
+            _download_and_extract(url, directory, 'movielens.tar.gz')
+
         self.directory = directory
 
         users = []
