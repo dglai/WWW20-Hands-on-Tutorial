@@ -43,7 +43,7 @@ Agenda
 | Time | Session | Material | Presenter |
 |:----:|:-------:|:--------:|:---------:|
 | 9:00-9:45 | Overview of Graph Neural Networks | [slides](https://github.com/zheng-da/dgl-tutorial-full/blob/master/GNN_overview.pptx) | George Karypis |
-| 9:45-10:30 | Overview of Deep Graph Library (DGL) | [slides](https://github.com/zheng-da/dgl-tutorial-full/blob/master/dgl_api/slides.pdf) | Zheng Zhang |
+| 9:45-10:30 | Overview of Deep Graph Library (DGL) | [slides](https://github.com/zheng-da/dgl-tutorial-full/blob/master/dgl_api/dgl-www-zz.pptx) | Zheng Zhang |
 | 10:30-11:00 | Virtual Coffee Break | | |
 | 11:00-12:30 | (Hands-on) GNN models for basic graph tasks | [notebook](https://github.com/dglai/WWW20-Hands-on-Tutorial/blob/master/_legacy/basic_apps/BasicTasks_pytorch.ipynb) | Minjie Wang |
 | 12:30-14:00 | Virtual Lunch Break | | |
@@ -84,3 +84,7 @@ Section Content
   following an end-to-end learning approach. For fraud detection, it extends the node
   classification model in the previous section to work on heterogeneous graphs and addresses
   the scenario where there exist few labelled samples.
+
+## Community
+
+Join our [Slack channel "WWW20-tutorial"](https://join.slack.com/t/deep-graph-library/shared_invite/zt-docxzmw2-9yMsL7rv9a2tpjzlLlVptg) for discussion.
