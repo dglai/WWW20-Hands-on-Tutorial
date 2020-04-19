@@ -84,3 +84,7 @@ Section Content
   following an end-to-end learning approach. For fraud detection, it extends the node
   classification model in the previous section to work on heterogeneous graphs and addresses
   the scenario where there exist few labelled samples.
+
+## Community
+
+Join our [Slack channel "WWW20-tutorial"](https://join.slack.com/t/deep-graph-library/shared_invite/zt-docxzmw2-9yMsL7rv9a2tpjzlLlVptg) for discussion.
