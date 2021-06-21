@@ -1,6 +1,9 @@
 Learning Graph Neural Networks with Deep Graph Library -- WWW 2020 Hands-on Tutorial
 ===
 
+**This tutorial is developed for DGL 0.4.3, so some of the contents could be out-dated.**
+
+
 Presenters: George Karypis, Zheng Zhang, Minjie Wang, Da Zheng, Quan Gan
 
 Time: (UTC/GMT +8) 09:00-16:30, April, 20, Monday
